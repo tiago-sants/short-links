@@ -1,0 +1,26 @@
+{
+	"name": "short-links",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"start": "node dist/server.mjs",
+		"build": "npm run lint && tsup src --format esm",
+		"lint": "yarn biome check --apply ./src",
+		"dev": "tsx watch ./src/server.ts",
+		"setup": "tsx ./src/setup.ts"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.6.2",
+		"@types/node": "^20.11.30",
+		"tsup": "^8.0.2",
+		"tsx": "^4.7.1",
+		"typescript": "^5.4.3"
+	},
+	"dependencies": {
+		"fastify": "^4.26.2",
+		"postgres": "^3.4.4",
+		"redis": "^4.6.13",
+		"zod": "^3.22.4"
+	}
+}
